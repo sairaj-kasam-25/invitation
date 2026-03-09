@@ -1,0 +1,301 @@
+.section {
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  background: var(--color-cream);
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(184, 147, 90, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 90% 80%, rgba(184, 147, 90, 0.06) 0%, transparent 60%);
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.title {
+  font-family: var(--font-accent);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 400;
+  color: var(--color-text);
+  letter-spacing: 0.2em;
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(5, 5, 5, 0.6);
+  text-align: center;
+}
+
+.subtitle strong {
+  color: var(--color-gold-dark);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: #fff;
+  padding: 52px;
+  border: 1px solid var(--color-border);
+  border-radius: calc(var(--radius) * 1.5);
+  box-shadow: 0 8px 48px rgba(155, 93, 229, 0.12);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field label {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(5, 5, 5, 0.55);
+}
+
+.field input,
+.field select,
+.field textarea {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-text);
+  border: 1px solid rgba(5, 5, 5, 0.15);
+  background: #fff;
+  padding: 12px 16px;
+  outline: none;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+  border-radius: var(--radius);
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--color-pink);
+  box-shadow: 0 0 0 3px rgba(255, 45, 120, 0.1);
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: rgba(5, 5, 5, 0.3);
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Radio */
+.radioGroup {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.radioLabel input[type="radio"] {
+  display: none;
+}
+
+.radioCustom {
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid rgba(5, 5, 5, 0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.radioCustom::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--color-gold);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.radioLabel input[type="radio"]:checked + .radioCustom {
+  border-color: var(--color-gold);
+}
+
+.radioLabel input[type="radio"]:checked + .radioCustom::after {
+  opacity: 1;
+}
+
+/* Checkbox */
+.checkGroup {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.checkLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.checkLabel input[type="checkbox"] {
+  display: none;
+}
+
+.checkCustom {
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid rgba(5, 5, 5, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, background 0.2s;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.checkCustom::after {
+  content: '✓';
+  font-size: 11px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.checkLabel input[type="checkbox"]:checked + .checkCustom {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+.checkLabel input[type="checkbox"]:checked + .checkCustom::after {
+  opacity: 1;
+}
+
+.submitBtn {
+  padding: 16px 56px;
+  border-radius: var(--radius-pill);
+  background: var(--grad-pop);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+  transition: transform 0.25s, box-shadow 0.25s;
+  box-shadow: 0 4px 20px rgba(255, 45, 120, 0.4);
+}
+
+.submitBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(255, 45, 120, 0.58);
+}
+
+/* Success */
+.success {
+  background: #fff;
+  padding: 72px 52px;
+  text-align: center;
+  border: 1px solid var(--color-border);
+  border-radius: calc(var(--radius) * 1.5);
+  box-shadow: 0 8px 48px rgba(155, 93, 229, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.successIcon {
+  font-size: 2rem;
+  color: var(--color-gold);
+  animation: spin 4s linear infinite;
+}
+
+.successTitle {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-text);
+}
+
+.successText {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(5, 5, 5, 0.6);
+  max-width: 480px;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 810px) {
+  .form {
+    padding: 36px 28px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  .checkGroup {
+    grid-template-columns: 1fr;
+  }
+}

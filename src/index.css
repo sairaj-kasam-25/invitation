@@ -1,0 +1,105 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-bg: #fafafa;
+  --color-text: #12001a;
+  --color-dark: #0a0014;
+  --color-black: #000;
+
+  /* Pop palette */
+  --color-pink: #ff2d78;
+  --color-pink-light: #ff6fa3;
+  --color-pink-dark: #be0055;
+  --color-purple: #9b5de5;
+  --color-purple-light: #c77dff;
+  --color-yellow: #fee440;
+
+  /* Backward-compat gold → pink */
+  --color-gold: #ff2d78;
+  --color-gold-light: #ff6fa3;
+  --color-gold-dark: #be0055;
+
+  /* Backgrounds */
+  --color-cream: #fdf0f8;
+  --color-cream-dark: #fbe4f3;
+  --color-border: rgba(155, 93, 229, 0.22);
+
+  /* Gradients */
+  --grad-pop: linear-gradient(135deg, #ff2d78 0%, #9b5de5 100%);
+  --grad-pop-r: linear-gradient(135deg, #9b5de5 0%, #ff2d78 100%);
+  --grad-warm: linear-gradient(135deg, #ff2d78 0%, #ff9a3c 100%);
+  --grad-cool: linear-gradient(135deg, #c77dff 0%, #6a00f4 100%);
+
+  --font-display: 'Cormorant', 'Cormorant Infant', serif;
+  --font-upright: 'Cormorant Upright', serif;
+  --font-accent: 'Aboreto', cursive;
+  --font-body: 'Manrope', sans-serif;
+
+  --max-width: 1200px;
+  --nav-height: 72px;
+  --radius: 16px;
+  --radius-pill: 100px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 3px;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media (max-width: 810px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 20px;
+  }
+}

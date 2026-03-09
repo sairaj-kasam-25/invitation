@@ -1,0 +1,145 @@
+.footer {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0 60px;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, #0a0014 0%, #160025 100%);
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 52px;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.names {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1;
+  background: var(--grad-pop);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.amp {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-style: italic;
+  color: var(--color-gold);
+  line-height: 1;
+}
+
+.tagline {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 300px;
+}
+
+.divider span:first-child,
+.divider span:last-child {
+  flex: 1;
+  height: 1px;
+  background: rgba(155, 93, 229, 0.2);
+  display: block;
+}
+
+.dividerIcon {
+  color: var(--color-gold);
+  font-size: 0.65rem;
+  opacity: 0.6;
+  flex: none !important;
+  height: auto !important;
+  background: none !important;
+}
+
+.details {
+  display: flex;
+  gap: 80px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.detailCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.detailLabel {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(199, 125, 255, 0.6);
+}
+
+.detailValue {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.bottom {
+  border-top: 1px solid rgba(155, 93, 229, 0.12);
+  padding-top: 28px;
+  width: 100%;
+  text-align: center;
+}
+
+.copyright {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.25);
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 810px) {
+  .details {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .names {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+  .details {
+    flex-direction: column;
+    gap: 28px;
+  }
+}
