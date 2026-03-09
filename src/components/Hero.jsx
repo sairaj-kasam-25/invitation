@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { couple, reception } from '../data/weddingData';
 import styles from './Hero.module.css';
@@ -13,7 +13,7 @@ export default function Hero() {
     <section id="home" className={styles.hero} ref={ref}>
       {/* Parallax background */}
       <motion.div className={styles.bgWrap} style={{ y }}>
-        <div className={styles.bg} />
+        <div className={styles.bg} style={{ backgroundImage: `url(${import.meta.env.BASE_URL}img/AJ_06417.JPG)` }} />
         <div className={styles.bgOverlay} />
       </motion.div>
 

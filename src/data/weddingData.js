@@ -24,12 +24,12 @@ export const reception = {
   description: "A year ago, we began our beautiful journey together as husband and wife. As we could not celebrate that special moment with all of you earlier, we now look forward to celebrating together. With great joy, we invite you to join us for our Reception Party as we celebrate this special milestone in our lives.",
   mapsLink: "https://maps.app.goo.gl/pX81YCcUAxLTbAXD9?g_st=aw",
   color: "#ff2d78",
-  image: "/img/AJ_06810.JPG"
+  image: `${import.meta.env.BASE_URL}img/AJ_06810.JPG`
 };
 
 export const gallery = [
-  { id: 'g1', src: '/img/AJ_06417.JPG', alt: 'Ganesh & Manasa' },
-  { id: 'g2', src: '/img/AJ_06791.JPG', alt: 'Ganesh & Manasa' },
-  { id: 'g3', src: '/img/AJ_06810.JPG', alt: 'Ganesh & Manasa' },
-  { id: 'g4', src: '/img/DSC04735.JPG', alt: 'Ganesh & Manasa' },
+  { id: 'g1', src: `${import.meta.env.BASE_URL}img/AJ_06417.JPG`, alt: 'Ganesh & Manasa' },
+  { id: 'g2', src: `${import.meta.env.BASE_URL}img/AJ_06791.JPG`, alt: 'Ganesh & Manasa' },
+  { id: 'g3', src: `${import.meta.env.BASE_URL}img/AJ_06810.JPG`, alt: 'Ganesh & Manasa' },
+  { id: 'g4', src: `${import.meta.env.BASE_URL}img/DSC04735.JPG`, alt: 'Ganesh & Manasa' },
 ];
